@@ -67,7 +67,7 @@ class EventManager:
         self._thread.join()
         info("Event manager %s has been shut down", self._name)
 
-GLOBAL = EventManager()
+GLOBAL = EventManager("GlobalEvent")
 
 register = GLOBAL.register
 dispatch = GLOBAL.dispatch
